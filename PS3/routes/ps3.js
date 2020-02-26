@@ -4,10 +4,6 @@ var router = express.Router();
 
 /* GET home page. */
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'PS3' });
-});
-
 router.get('/example', function(req, res, next) {
   res.render('example', { string: 'example' });
 });
