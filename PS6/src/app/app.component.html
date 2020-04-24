@@ -1,0 +1,9 @@
+<h1> Confirmed Coronavirus Cases by Countries </h1>
+<button (click) = toggleDisplay()>Show/Hide</button>
+<ul>
+    <li *ngFor="let data of jsonData">
+            <div [hidden]="isShow"> {{data.Country}} </div>
+          <br>
+          <div [hidden]="isShow">{{data.TotalConfirmed}}</div>
+    </li>
+</ul>
