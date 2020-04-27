@@ -1,7 +1,4 @@
 import { Component, Output } from '@angular/core';
-import { range } from 'rxjs';
-import { Data } from './Data';
-import { JsonData } from './DataMock'
 
 @Component({
   selector: 'app-root',
@@ -10,20 +7,17 @@ import { JsonData } from './DataMock'
 })
 export class AppComponent {
 
-  jsonData = JsonData;
-  private StatsGot: Data;
   isShow = true;
+  data: string;
   
-  title = 'PS6';
 
   constructor(){
   } 
 
-  getStats(data: Data){
-    this.StatsGot = data;   
-    }
+  receiveMessage($event){
+    this.data = $event;
+  }
 
- 
   toggleDisplay() {
     this.isShow = !this.isShow;
   }

@@ -1,0 +1,10 @@
+<form [formGroup]="countryForm" (ngSubmit)="onSubmit(countryForm.value)">
+    <div>
+      <label for="country">
+        Country
+      </label>
+      <input id="country" type="text" formControlName="country" required>
+    </div>
+
+    <button class="button" type="submit">Query</button>
+</form>   
